@@ -138,7 +138,7 @@ else:
 
 # 6. Main UI Header
 try:
-    st.image("Screenshots/gigatron.png", width=80)
+    st.image("GigatronAI/gigatron.png", width=80)
 except:
     pass
 
@@ -155,7 +155,7 @@ client = OpenAI(
 current_messages = st.session_state.chat_sessions[st.session_state.current_session]
 
 for message in current_messages:
-    avatar_icon = "Screenshots/gigatron.png" if message["role"] == "assistant" else "👤"
+    avatar_icon = "GigatronAI/gigatron.png" if message["role"] == "assistant" else "👤"
     with st.chat_message(message["role"], avatar=avatar_icon):
         st.markdown(message["content"])
 
