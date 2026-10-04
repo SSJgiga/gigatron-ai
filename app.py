@@ -146,8 +146,9 @@ st.title("🤖 Gigatron: Character AI")
 st.write(f"Mode: **{mode}** | Active Thread: **{st.session_state.current_session}**")
 
 # 7. Initialize Groq Client
-client = OpenAI(
-    api_key=st.secrets["GROQ_API_KEY"],
+from groq import Groq
+
+client = Groq(api_key=st.secrets["GROQ_API_KEY"])
     base_url="https://api.groq.com/openai/v1"
 )
 
