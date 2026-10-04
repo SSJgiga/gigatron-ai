@@ -149,8 +149,7 @@ st.write(f"Mode: **{mode}** | Active Thread: **{st.session_state.current_session
 from groq import Groq
 
 client = Groq(api_key=st.secrets["GROQ_API_KEY"])
-    base_url="https://api.groq.com/openai/v1"
-)
+  
 
 # 8. Retrieve Current Chat Thread History with Custom Avatars
 current_messages = st.session_state.chat_sessions[st.session_state.current_session]
